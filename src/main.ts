@@ -193,14 +193,18 @@ function render(): void {
   composer.render();
 }
 
-const Story = () => (
-  <div
-    ref={(ref) => {
-      if (ref != null) {
-        init(ref);
-      }
-    }}
-  />
-);
+// const Story = () => (
+//   <div
+//     ref={(ref) => {
+//       if (ref != null) {
+//         init(ref);
+//       }
+//     }}
+//   />
+// );
 
-export default Story;
+const handleInit = (el: HTMLDivElement) => {
+  init(el);
+};
+
+export default handleInit;
